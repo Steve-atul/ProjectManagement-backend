@@ -2,7 +2,7 @@
 
 const User = require("../models/user.js");
 const createError = require("../utils/createError.js");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
 const dotenv = require("dotenv");
 
 dotenv.config();
