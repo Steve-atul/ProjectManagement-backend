@@ -17,9 +17,15 @@ const port = process.env.PORT || 8000;
 app.use(express.json());
 app.use(cookieParser());
 
+const allowedOrigins = [
+  'https://projectmanagement-frontend.onrender.com', 
+  'http://localhost:3000' 
+];
+
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: allowedOrigins,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   })
 );
